@@ -1,0 +1,283 @@
+/* リセット・基本 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "zen-kaku-gothic-antique", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222;
+  background-color: #ffffff;
+}
+
+/* ナビゲーション */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid #eee;
+  z-index: 100;
+}
+
+.nav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #222;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+nav ul a {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav ul a:hover {
+  color: #222;
+}
+
+/* ヒーロー */
+#hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+#hero h1 {
+    font-family: zen-kaku-gothic-antique, sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    font-style: normal;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: #888;
+}
+
+/* セクション共通 */
+section {
+  padding: 6rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'zen-kaku-gothic-new', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #aaa;
+  margin-bottom: 3rem;
+}
+
+/* 作品グリッド */
+.works-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+/* カテゴリカード */
+.category-card {
+  text-decoration: none;
+  color: #222;
+  cursor: pointer;
+}
+
+.category-img-wrap {
+  width: 100%;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.category-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover .category-img-wrap img {
+  transform: scale(1.03);
+}
+
+.category-card h3 {
+  font-family: 'zen-kaku-gothic-new', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* About */
+.about-content {
+  max-width: 600px;
+  line-height: 1.9;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* Contact */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-content p {
+  font-size: 0.85rem;
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
+.mail-link {
+  font-family: "zen-kaku-gothic-antique", sans-serif;
+  font-weight: 400;
+    font-size: 1.5rem;
+  font-style: normal;
+  color: #222;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.25rem;
+  transition: border-color 0.2s;
+  width: fit-content;
+}
+
+.mail-link:hover {
+  border-color: #222;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.75rem;
+  color: #bbb;
+  letter-spacing: 0.08em;
+  border-top: 1px solid #eee;
+}
+
+.nav-name {
+  font-family: 'zen-kaku-gothic-new', sans-serif;
+  font-style: normal;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+}
+
+/* カテゴリページのヘッダー */
+#page-header {
+  padding: 10rem 3rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-family: 'zen-kaku-gothic-new', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* 作品カード（カテゴリページ用） */
+.card {
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: opacity 0.3s;
+}
+
+.card:hover img {
+  opacity: 0.85;
+}
+
+.card h3 {
+  font-family: 'zen-kaku-gothic-new', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.card .year {
+  font-size: 0.75rem;
+  color: #aaa;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.card .desc {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+
+  /* ナビゲーション */
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+  }
+
+  /* ヒーロー */
+  #hero h1 {
+    font-size: 3rem;
+  }
+
+  /* セクション */
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  /* カテゴリグリッド・作品グリッド：1列に変える */
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* カテゴリページのヘッダー */
+  #page-header {
+    padding: 7rem 1.5rem 2rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+}
