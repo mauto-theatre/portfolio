@@ -5,13 +5,13 @@ if (isMobile) {
   const cards = document.querySelectorAll(".card");
 
   cards.forEach(function(card) {
-    let tapped = false;
-
     card.addEventListener("click", function(e) {
-      if (!tapped) {
-        // 1回目のタップ：遷移をキャンセルしてタイトルを表示
+      if (!card.classList.contains("tapped")) {
+        // 1回目のタップ：他のカードをリセットしてこのカードを拡大
         e.preventDefault();
-        tapped = true;
+        cards.forEach(function(c) {
+          c.classList.remove("tapped");
+        });
         card.classList.add("tapped");
       }
       // 2回目のタップ：そのまま遷移
