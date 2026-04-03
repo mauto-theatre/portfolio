@@ -298,7 +298,7 @@ footer {
   }
 
   .works-grid-photo {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
