@@ -310,6 +310,18 @@ footer {
   .card.tapped h3 {
     opacity: 1;
   }
+
+  .card {
+    transition: transform 0.3s ease;
+  }
+
+  .card.tapped {
+    transform: scale(1.08);
+  }
+
+  .card.tapped h3 {
+    opacity: 1;
+  }
 }
 
 /* 作品詳細ページ共通 */
