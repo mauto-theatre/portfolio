@@ -280,4 +280,10 @@ footer {
     font-size: 2rem;
   }
 
+  /* 名前を姓名で改行する */
+  #hero h1 .name-last,
+  #hero h1 .name-first {
+    display: block;
+  }
+
 }
