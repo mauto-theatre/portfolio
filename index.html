@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toma ISHIGAKI Portfolio</title>
+    <script>
+    (function(d) {
+      var config = {
+        kitId: 'hlx8mrj',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- ナビゲーション -->
+    <nav>
+      <a href="#" class="nav-name">Toma ISHIGAKI</a>
+      <ul>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ヒーロー：最初に見える大きなエリア -->
+     <section id="hero">
+      <h1>
+        <span class="name-last">いしがき</span>
+        <span class="name-first">とうま</span>
+      </h1>
+      <p>Theatre · Workshop · Place-making</p>
+    </section>
+
+    <!-- 作品一覧 -->
+     <section id="works">
+       <h2 class="section-title">Works</h2>
+
+       <div class="works-grid">
+        
+        <a href="photo.html" class="category-card">
+          <div class="category-img-wrap">
+           <img src="images/cover-photo.jpg" alt="写真作品">
+          </div>
+          <h3>Photo</h3>
+        </a>
+
+        <a href="video.html" class="category-card">
+          <div class="category-img-wrap">
+            <img src="images/cover-video.jpg" alt="映像作品">
+          </div>
+          <h3>Video</h3>
+        </a>
+
+       <a href="theatre.html" class="category-card">
+         <div class="category-img-wrap">
+           <img src="images/cover-theatre.jpg" alt="演劇作品">
+         </div>
+         <h3>Theatre</h3>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 自己紹介 -->
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <div class="about-content">
+        <p>いしがき とうま(Toma ISHIGAKI)<br>横浜国立大学 都市科学府 Y-GSC所属<br>演劇をキーワードに、人と人が繋がることのできる場の創造を目標としています。<br>演劇団体 内弁慶の立往生でよく演劇をしています。
+
+        </p>
+      </div>
+    </section>
+
+    <!-- 連絡先 -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-content">
+        <p>お問い合わせはこちらから</p>
+        <a href="mailto:your@email.com" class="mail-link">mauto9280@gmail.com</a>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+      <p>© 石垣統万-Toma ISHIGAKI</p>
+    </footer>
+
+    <script src="lenis.min.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
