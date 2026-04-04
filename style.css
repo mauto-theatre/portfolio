@@ -414,3 +414,9 @@ footer {
 .works-section-video {
   padding-top: 0.875rem;
 }
+
+.video-embed {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: 0 auto 2rem;
+}
