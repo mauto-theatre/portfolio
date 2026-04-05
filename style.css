@@ -5,6 +5,18 @@
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "zen-kaku-gothic-antique", sans-serif;
   font-weight: 400;
@@ -26,13 +38,14 @@ nav {
   background-color: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid #eee;
   z-index: 100;
+  transition: transform 0.3s ease;
 }
 
 .nav-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
+  font-family: 'zen-kaku-gothic-new', sans-serif;
+  font-style: normal;
   font-size: 1.1rem;
-  font-weight: 300;
+  font-weight: 700;
   color: #222;
   text-decoration: none;
 }
@@ -67,10 +80,10 @@ nav ul a:hover {
 }
 
 #hero h1 {
-    font-family: zen-kaku-gothic-antique, sans-serif;
-    font-size: 5rem;
-    font-weight: 700;
-    font-style: normal;
+  font-family: zen-kaku-gothic-antique, sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  font-style: normal;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
 }
@@ -97,11 +110,36 @@ section {
   margin-bottom: 3rem;
 }
 
+.section-title a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.section-title a:hover {
+  color: #222;
+}
+
 /* 作品グリッド */
 .works-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+}
+
+.works-grid-photo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.works-section-wide {
+  padding: 6rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.works-section-video {
+  padding-top: 0.875rem;
 }
 
 /* カテゴリカード */
@@ -136,6 +174,59 @@ section {
   letter-spacing: 0.1em;
 }
 
+/* 作品カード */
+.card {
+  text-decoration: none;
+  color: #222;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.card .card-img-wrap {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card .card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-family: 'zen-kaku-gothic-new', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover h3 {
+  opacity: 1;
+}
+
+/* 映像カード */
+.card-video .card-img-wrap {
+  aspect-ratio: 3/2;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* デモリール */
+.demo-reel {
+  max-width: 600px;
+  margin: 0 auto 4rem;
+}
+
 /* About */
 .about-content {
   max-width: 600px;
@@ -160,7 +251,7 @@ section {
 .mail-link {
   font-family: "zen-kaku-gothic-antique", sans-serif;
   font-weight: 400;
-    font-size: 1.5rem;
+  font-size: 1.5rem;
   font-style: normal;
   color: #222;
   text-decoration: none;
@@ -184,18 +275,9 @@ footer {
   border-top: 1px solid #eee;
 }
 
-.nav-name {
-  font-family: 'zen-kaku-gothic-new', sans-serif;
-  font-style: normal;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #222;
-  text-decoration: none;
-}
-
 /* カテゴリページのヘッダー */
 #page-header {
-  padding: 10rem 3rem 3rem;
+  padding: 10rem 3rem 1rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -207,123 +289,6 @@ footer {
   letter-spacing: -0.01em;
 }
 
-/* 作品カード（カテゴリページ用） */
-.card {
-  text-decoration: none;
-  color: #222;
-  cursor: pointer;
-  transition: transform 0.4s ease;
-}
-
-.card .card-img-wrap {
-  width: 100%;
-  aspect-ratio: 4/3;
-  overflow: hidden;
-  background-color: #fff;
-}
-
-.card .card-img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-}
-
-/* ホバーで枠ごと拡大 */
-.card:hover {
-  transform: scale(1.05);
-}
-
-/* タイトルは普段は透明・中央揃え */
-.card h3 {
-  font-family: 'zen-kaku-gothic-new', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-top: 0.75rem;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-/* ホバーでタイトルが出る */
-.card:hover h3 {
-  opacity: 1;
-}
-
-.works-grid-photo {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1.5rem;
-}
-
-/* スマホ対応 */
-@media (max-width: 600px) {
-
-  /* ナビゲーション */
-  nav {
-    padding: 1rem 1.5rem;
-  }
-
-  nav ul {
-    gap: 1.5rem;
-  }
-
-  /* ヒーロー */
-  #hero h1 {
-    font-size: 3rem;
-  }
-
-  /* セクション */
-  section {
-    padding: 4rem 1.5rem;
-  }
-
-  /* カテゴリグリッド・作品グリッド：1列に変える */
-  .works-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* カテゴリページのヘッダー */
-  #page-header {
-    padding: 7rem 1.5rem 2rem;
-  }
-
-  .page-title {
-    font-size: 2rem;
-  }
-
-  /* 名前を姓名で改行する */
-  #hero h1 .name-last,
-  #hero h1 .name-first {
-    display: block;
-  }
-
-  .works-grid-photo {
-    grid-template-columns: 1fr;
-  }
-
-  /* タップしたときの拡大とタイトル表示 */
-  .card.tapped {
-    transform: scale(1.08);
-  }
-
-  .card.tapped h3 {
-    opacity: 1;
-  }
-
-  .card {
-    transition: transform 0.3s ease;
-  }
-
-  .card.tapped {
-    transform: scale(1.08);
-  }
-
-  .card.tapped h3 {
-    opacity: 1;
-  }
-}
-
 /* 作品詳細ページ共通 */
 .work-detail {
   max-width: 900px;
@@ -332,7 +297,7 @@ footer {
 }
 
 .work-breadcrumb {
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 0.1em;
   color: #aaa;
   margin-bottom: 0.75rem;
@@ -351,10 +316,27 @@ footer {
   font-family: 'zen-kaku-gothic-new', sans-serif;
   font-size: 2rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.work-year {
+  font-size: 0.8rem;
+  color: #aaa;
+  letter-spacing: 0.08em;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.work-desc {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.9;
+  max-width: 600px;
+  margin-top: 1.5rem;
   margin-bottom: 3rem;
 }
 
-/* 写真詳細：画像を縦に大きく並べる */
+/* 写真詳細 */
 .photo-images {
   display: flex;
   flex-direction: column;
@@ -366,9 +348,52 @@ footer {
   display: block;
 }
 
+/* 映像埋め込み */
+.video-embed {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* 演劇詳細の情報 */
+.theatre-info {
+  margin-top: 3rem;
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+}
+
+.theatre-info-row {
+  display: flex;
+  gap: 2rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.theatre-info-label {
+  font-size: 0.75rem;
+  color: #aaa;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.theatre-info-value {
+  font-size: 0.85rem;
+  color: #444;
+  line-height: 1.7;
+}
+
 /* 前後ナビ */
 .work-nav {
-  margin-top: 4rem;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -386,13 +411,6 @@ footer {
   transform: translateY(-160px);
 }
 
-.work-breadcrumb {
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  color: #aaa;
-  margin-bottom: 0.75rem;
-}
-
 .work-nav a {
   font-size: 1rem;
   color: #aaa;
@@ -405,58 +423,56 @@ footer {
   color: #222;
 }
 
-.works-section-wide {
-  padding: 6rem 3rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
+/* スマホ対応 */
+@media (max-width: 600px) {
 
-.work-year {
-  font-size: 0.8rem;
-  color: #aaa;
-  letter-spacing: 0.08em;
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
-}
+  nav {
+    padding: 1rem 1.5rem;
+  }
 
-.demo-reel {
-  max-width: 600px;
-  margin: 0 auto 4rem;
-}
+  nav ul {
+    gap: 1.5rem;
+  }
 
-.section-title a {
-  color: #aaa;
-  text-decoration: none;
-}
+  #hero h1 {
+    font-size: 3rem;
+  }
 
-.section-title a:hover {
-  color: #222;
-}
+  section {
+    padding: 4rem 1.5rem;
+  }
 
-.card-video .card-img-wrap {
-  aspect-ratio: 3/2;
-  width: 80%;
-  margin: 0 auto;
-}
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
 
-.works-section-video {
-  padding-top: 0.875rem;
-}
+  #page-header {
+    padding: 7rem 1.5rem 2rem;
+  }
 
-.video-embed {
-  width: 100%;
-  aspect-ratio: 16/9;
-  margin: 0 auto 2rem;
-  display: block;
-}
+  .page-title {
+    font-size: 2rem;
+  }
 
-.video-embed iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
+  #hero h1 .name-last,
+  #hero h1 .name-first {
+    display: block;
+  }
 
-html {
-  scroll-behavior: smooth;
+  .works-grid-photo {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    transition: transform 0.3s ease;
+  }
+
+  .card.tapped {
+    transform: scale(1.08);
+  }
+
+  .card.tapped h3 {
+    opacity: 1;
+  }
+
 }
