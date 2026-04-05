@@ -319,6 +319,16 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+.work-section-title {
+  font-family: 'zen-kaku-gothic-new', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #000000;
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+}
+
 .work-year {
   font-size: 0.8rem;
   color: #aaa;
@@ -424,17 +434,23 @@ footer {
 }
 
 /* スライダー */
+.slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .slider {
   position: relative;
   width: 100%;
-  max-width: 600px;
   overflow: hidden;
-  margin: 0 auto;
 }
 
 .slider-track {
   display: flex;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .slider-track img {
@@ -446,9 +462,6 @@ footer {
 
 .slider-prev,
 .slider-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   background: none;
   border: none;
   font-size: 1.2rem;
@@ -456,19 +469,12 @@ footer {
   cursor: pointer;
   color: #aaa;
   transition: color 0.2s;
+  flex-shrink: 0;
 }
 
 .slider-prev:hover,
 .slider-next:hover {
-  background: #fff;
-}
-
-.slider-prev {
-  left: 1rem;
-}
-
-.slider-next {
-  right: 1rem;
+  color: #222;
 }
 
 .slider-count {
