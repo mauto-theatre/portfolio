@@ -449,12 +449,13 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.8);
+  background: none;
   border: none;
   font-size: 1.2rem;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem;
   cursor: pointer;
-  transition: background 0.2s;
+  color: #aaa;
+  transition: color 0.2s;
 }
 
 .slider-prev:hover,
