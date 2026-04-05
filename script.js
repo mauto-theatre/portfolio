@@ -61,13 +61,14 @@ lenis.on("scroll", function(e) {
 });
 
 // スライダー＋ライトボックス
-const sliders = document.querySelectorAll(".slider");
+const sliderWraps = document.querySelectorAll(".slider-wrap");
 
-sliders.forEach(function(slider) {
+sliderWraps.forEach(function(wrap) {
+  const slider = wrap.querySelector(".slider");
   const track = slider.querySelector(".slider-track");
   const imgs = slider.querySelectorAll("img");
-  const prev = slider.querySelector(".slider-prev");
-  const next = slider.querySelector(".slider-next");
+  const prev = wrap.querySelector(".slider-prev");
+  const next = wrap.querySelector(".slider-next");
   const count = slider.querySelector(".slider-count");
   let current = 0;
   let autoTimer;
@@ -87,7 +88,6 @@ sliders.forEach(function(slider) {
     update();
   }
 
-  // 自動切り替え
   function startAuto() {
     autoTimer = setInterval(goNext, 5000);
   }
