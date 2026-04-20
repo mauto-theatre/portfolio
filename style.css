@@ -509,6 +509,7 @@ footer {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
+  z-index: 200;
 }
 
 .lightbox-img {
@@ -517,6 +518,7 @@ footer {
   max-height: 85vh;
   object-fit: contain;
   z-index: 201;
+  pointer-events: none;
 }
 
 .lightbox-close {
@@ -559,6 +561,18 @@ footer {
   z-index: 202;
 }
 
+.works-grid-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lightbox-tap-left,
+.lightbox-tap-right {
+  display: none;
+}
 
 /* スマホ対応 */
 @media (max-width: 600px) {
@@ -611,5 +625,33 @@ footer {
   .card.tapped h3 {
     opacity: 1;
   }
+
+    .slider-wrap {
+    gap: 0.5rem;
+  }
+
+  .slider-prev,
+  .slider-next {
+    font-size: 0.9rem;
+    padding: 0.25rem;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    display: none;
+  }
+
+  .lightbox-tap-left,
+  .lightbox-tap-right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 203;
+    cursor: pointer;
+  }
+
+  .lightbox-tap-left { left: 0; }
+  .lightbox-tap-right { right: 0; }
 
 }
