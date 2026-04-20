@@ -104,14 +104,16 @@ sliderWraps.forEach(function(wrap) {
   // ライトボックス
   const lightbox = document.createElement("div");
   lightbox.className = "lightbox";
-  lightbox.innerHTML = `
-    <div class="lightbox-overlay"></div>
-    <button class="lightbox-close">×</button>
-    <button class="lightbox-prev">←</button>
-    <button class="lightbox-next">→</button>
-    <img class="lightbox-img" src="" alt="">
-    <p class="lightbox-count"></p>
-  `;
+lightbox.innerHTML = `
+  <div class="lightbox-overlay"></div>
+  <button class="lightbox-close">×</button>
+  <button class="lightbox-prev">←</button>
+  <button class="lightbox-next">→</button>
+  <img class="lightbox-img" src="" alt="">
+  <div class="lightbox-tap-left"></div>
+  <div class="lightbox-tap-right"></div>
+  <p class="lightbox-count"></p>
+`;
   document.body.appendChild(lightbox);
 
   const lbImg = lightbox.querySelector(".lightbox-img");
@@ -150,4 +152,17 @@ sliderWraps.forEach(function(wrap) {
     lbImg.src = imgs[lbCurrent].src;
     lbCount.textContent = `${lbCurrent + 1} / ${imgs.length}`;
   });
+
+  lightbox.querySelector(".lightbox-tap-left").addEventListener("click", function() {
+   lbCurrent = (lbCurrent - 1 + imgs.length) % imgs.length;
+   lbImg.src = imgs[lbCurrent].src;
+   lbCount.textContent = `${lbCurrent + 1} / ${imgs.length}`;
+  });
+
+  lightbox.querySelector(".lightbox-tap-right").addEventListener("click", function() {
+   lbCurrent = (lbCurrent + 1) % imgs.length;
+   lbImg.src = imgs[lbCurrent].src;
+   lbCount.textContent = `${lbCurrent + 1} / ${imgs.length}`;
+  });
+  
 });
