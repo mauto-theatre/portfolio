@@ -133,6 +133,7 @@ nav ul a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: zen-kaku-gothic-antique, sans-serif;
   font-size: 1rem;
   letter-spacing: 0.2em;
   color: #eee;
