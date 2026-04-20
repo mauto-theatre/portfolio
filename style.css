@@ -753,7 +753,15 @@ footer {
   #about {
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 0.25rem;
   }
+
+    #about .about-content p {
+    font-size: 0.9rem;
+  }
+
+  #about .section-title {
+    font-size: 0.85rem;
+  }
+}
 
 }
