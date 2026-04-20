@@ -110,8 +110,6 @@ lightbox.innerHTML = `
   <button class="lightbox-prev">←</button>
   <button class="lightbox-next">→</button>
   <img class="lightbox-img" src="" alt="">
-  <div class="lightbox-tap-left"></div>
-  <div class="lightbox-tap-right"></div>
   <p class="lightbox-count"></p>
 `;
   document.body.appendChild(lightbox);
@@ -153,16 +151,19 @@ lightbox.innerHTML = `
     lbCount.textContent = `${lbCurrent + 1} / ${imgs.length}`;
   });
 
-  lightbox.querySelector(".lightbox-tap-left").addEventListener("click", function() {
-   lbCurrent = (lbCurrent - 1 + imgs.length) % imgs.length;
-   lbImg.src = imgs[lbCurrent].src;
-   lbCount.textContent = `${lbCurrent + 1} / ${imgs.length}`;
-  });
-
-  lightbox.querySelector(".lightbox-tap-right").addEventListener("click", function() {
-   lbCurrent = (lbCurrent + 1) % imgs.length;
-   lbImg.src = imgs[lbCurrent].src;
-   lbCount.textContent = `${lbCurrent + 1} / ${imgs.length}`;
-  });
+  if (window.matchMedia("(max-width: 600px)").matches) {
+   lbImg.style.pointerEvents = "auto";
+   lbImg.addEventListener("click", function(e) {
+     const rect = lbImg.getBoundingClientRect();
+     const x = e.clientX - rect.left;
+     if (x < rect.width / 2) {
+       lbCurrent = (lbCurrent - 1 + imgs.length) % imgs.length;
+     } else {
+       lbCurrent = (lbCurrent + 1) % imgs.length;
+     }
+     lbImg.src = imgs[lbCurrent].src;
+     lbCount.textContent = `${lbCurrent + 1} / ${imgs.length}`;
+    });
+  }
   
 });
