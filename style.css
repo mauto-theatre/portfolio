@@ -108,7 +108,7 @@ nav ul a:hover {
 
 #hero h1 {
   position: absolute;
-  top: 5%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   font-family: zen-kaku-gothic-antique, sans-serif;
