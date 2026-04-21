@@ -112,7 +112,7 @@ nav ul a:hover {
   left: 50%;
   transform: translateX(-50%);
   font-family: zen-kaku-gothic-antique, sans-serif;
-  font-size: 7rem;
+  font-size: clamp(1.5rem,8vw,7rem);
   font-weight: 900;
   font-style: normal;
   letter-spacing: -0.02em;
@@ -680,10 +680,6 @@ footer {
 
   nav ul {
     gap: 1.5rem;
-  }
-
-  #hero h1 {
-    font-size: 4rem;
   }
 
   section {
