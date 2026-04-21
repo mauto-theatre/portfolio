@@ -108,7 +108,7 @@ nav ul a:hover {
 
 #hero h1 {
   position: absolute;
-  top: 15%;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
   font-family: zen-kaku-gothic-antique, sans-serif;
@@ -698,6 +698,11 @@ footer {
     font-size: 2rem;
   }
 
+  #hero h1 {
+    top: 15%;
+    font-size: 2rem;
+  }
+
   #hero h1 .name-last,
   #hero h1 .name-first {
     display: block;
@@ -719,7 +724,7 @@ footer {
     opacity: 1;
   }
 
-    .slider-wrap {
+  .slider-wrap {
     gap: 0.25rem;
   }
 
