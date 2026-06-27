@@ -173,6 +173,9 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+
 }
 
 .works-grid-photo {
@@ -746,7 +749,7 @@ footer {
 
   #hero h1 {
     top: 20%;
-    font-size: 4rem;
+    font-size: clamp(2rem, 12vw, 4rem);
   }
 
   #hero h1 .name-last,
