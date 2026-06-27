@@ -168,6 +168,46 @@ lightbox.innerHTML = `
   
 });
 
+// トップに戻るボタン
+const toTopBtn = document.createElement("button");
+toTopBtn.className = "to-top";
+toTopBtn.textContent = "↑ Top";
+document.body.appendChild(toTopBtn);
+
+let autoScrolling = false;
+
+toTopBtn.addEventListener("click", function() {
+  autoScrolling = true;
+
+  lenis.scrollTo(0, {
+    duration: 0.6,
+    lerp: 1,
+    easing: function(t) { return t; },
+    onComplete: function() {
+      autoScrolling = false;
+    }
+  });
+});
+
+function cancelAutoScroll() {
+  if (autoScrolling) {
+    autoScrolling = false;
+    // 現在のスクロール位置で強制的に止める
+    lenis.scrollTo(window.scrollY, { immediate: true });
+  }
+}
+
+window.addEventListener("wheel", cancelAutoScroll, { passive: true });
+window.addEventListener("touchstart", cancelAutoScroll, { passive: true });
+
+lenis.on("scroll", function(e) {
+  if (e.scroll > 500) {
+    toTopBtn.classList.add("visible");
+  } else {
+    toTopBtn.classList.remove("visible");
+  }
+});
+
 // ヒーロー背景のクロスフェード
 const heroBgImgs = document.querySelectorAll(".hero-bg-img");
 if (heroBgImgs.length > 0) {
