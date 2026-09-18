@@ -1,0 +1,76 @@
+// Video works — order here = 一覧の並び順 = prev/nextの循環順
+// 先頭(video-work1)はデモリールとして一覧の上部に単独表示される
+export const videos = [
+  {
+    slug: 'video-work1',
+    docTitle: 'video1 DEMO REEL',
+    cardTitle: 'デモリール - DEMO REEL',
+    cardCover: 'video1.jpg',
+    cardAlt: 'video1 DEMO REEL',
+    isDemoReel: true,
+    year: '2025年',
+    youtubeId: 'L8qPa2a2TX8',
+    images: [
+      { src: 'video1-1.jpg', alt: '作品タイトル' },
+      { src: 'video1-2.jpg', alt: '作品タイトル' },
+      { src: 'video1-3.jpg', alt: '作品タイトル' },
+    ],
+  },
+  {
+    slug: 'video-work2',
+    docTitle: 'video2 circadian rhythm',
+    cardTitle: '短編 『概日(がいじつ)リズム』',
+    titleHtml: '短編 『概日(がいじつ)リズム』<br>- Circadian Rhythm',
+    cardCover: 'video2.jpg',
+    cardAlt: 'video2 概日リズム',
+    year: '2025年',
+    youtubeId: 'pXVm_p3kp8o',
+    images: [
+      { src: 'video2-1.jpg', alt: '作品タイトル' },
+      { src: 'video2-2.jpg', alt: '作品タイトル' },
+      { src: 'video2-3.jpg', alt: '作品タイトル' },
+    ],
+  },
+  {
+    slug: 'video-work3',
+    docTitle: 'video3 hawaii',
+    cardTitle: '終演映像 『略式：ハワイ』',
+    cardCover: 'video3.jpg',
+    cardAlt: 'video3 略式：ハワイ',
+    year: '2024年',
+    youtubeId: 'wudzXcQ2amo',
+    images: [
+      { src: 'video3-1.jpg', alt: '作品タイトル' },
+      { src: 'video3-2.jpg', alt: '作品タイトル' },
+      { src: 'video3-3.jpg', alt: '作品タイトル' },
+    ],
+  },
+  {
+    slug: 'video-work4',
+    docTitle: 'video4 2000000000000000',
+    cardTitle: '情報公開 『2000兆年』',
+    cardCover: 'video4.jpg',
+    cardAlt: 'video4 2000兆年',
+    year: '2025年',
+    youtubeId: 'UjCyyy1iuEA',
+    images: [
+      { src: 'video4-1.jpg', alt: '作品タイトル' },
+      { src: 'video4-2.jpg', alt: '作品タイトル' },
+      { src: 'video4-3.jpg', alt: '作品タイトル' },
+    ],
+  },
+  {
+    slug: 'video-work5',
+    docTitle: 'video5 adballoon',
+    cardTitle: 'トレーラー 『アドバルーンよつれてって』',
+    cardCover: 'video5.jpg',
+    cardAlt: 'video5 アドバルーンよつれてって',
+    year: '2026年',
+    youtubeId: 'cHxah6hN-Gc',
+    images: [
+      { src: 'video5-1.jpg', alt: '作品タイトル' },
+      { src: 'video5-2.jpg', alt: '作品タイトル' },
+      { src: 'video5-3.jpg', alt: '作品タイトル' },
+    ],
+  },
+];
