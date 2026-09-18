@@ -10,6 +10,52 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
+// ハンバーガーメニューの開閉
+const navEl = document.querySelector("nav");
+const navToggle = document.querySelector(".nav-toggle");
+
+if (navEl && navToggle) {
+  function closeNav() {
+    navEl.classList.remove("nav-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+
+  navToggle.addEventListener("click", function() {
+    const isOpen = navEl.classList.toggle("nav-open");
+    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  navEl.querySelectorAll("ul a").forEach(function(link) {
+    link.addEventListener("click", closeNav);
+  });
+
+  document.addEventListener("click", function(e) {
+    if (navEl.classList.contains("nav-open") && !navEl.contains(e.target)) {
+      closeNav();
+    }
+  });
+}
+
+// スクロールで主要な要素をふわっと表示する
+const revealTargets = document.querySelectorAll(
+  ".section-title, .category-card, .card, .about-content, .contact-content"
+);
+
+if (revealTargets.length > 0 && "IntersectionObserver" in window) {
+  revealTargets.forEach(function(el) { el.classList.add("reveal"); });
+
+  const revealObserver = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealTargets.forEach(function(el) { revealObserver.observe(el); });
+}
+
 // スマホかどうかを判定する
 const isMobile = window.matchMedia("(max-width: 600px)").matches;
 

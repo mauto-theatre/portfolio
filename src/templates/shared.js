@@ -18,7 +18,10 @@ export function renderNav({ home = false } = {}) {
   return `
     <nav>
       <a href="${home ? '#' : 'index.html'}" class="nav-name">${site.name}</a>
-      <ul>
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
         <li><a href="${base}#works">Works</a></li>
         <li><a href="${base}#about">About</a></li>
         <li><a href="${base}#contact">Contact</a></li>
