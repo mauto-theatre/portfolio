@@ -1,6 +1,7 @@
 export const site = {
   name: 'Toma ISHIGAKI',
   nameKana: 'いしがき とうま',
+  heroSub: '演劇 , 場所 , 映像',
   email: 'mauto9280@gmail.com',
   footer: '© 石垣統万-Toma ISHIGAKI',
   aboutHtml:
