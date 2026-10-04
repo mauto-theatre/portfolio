@@ -36,9 +36,54 @@ if (navEl && navToggle) {
   });
 }
 
+// 作品一覧のフィルタ(All / Photo / Video / Products)
+const filterBtns = document.querySelectorAll(".filter-btn");
+const workTiles = document.querySelectorAll(".work-tile");
+
+if (filterBtns.length > 0) {
+  const validFilters = ["all", "photo", "video", "products"];
+
+  function applyFilter(key) {
+    filterBtns.forEach(function(btn) {
+      btn.classList.toggle("is-active", btn.dataset.filter === key);
+    });
+    workTiles.forEach(function(tile) {
+      const show = key === "all" || tile.dataset.category === key;
+      if (show && tile.hidden) {
+        // アニメーションを再生し直す
+        tile.style.animation = "none";
+        tile.offsetHeight;
+        tile.style.animation = "";
+      }
+      tile.hidden = !show;
+    });
+  }
+
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      applyFilter(btn.dataset.filter);
+      history.replaceState(null, "", btn.dataset.filter === "all" ? location.pathname : "#" + btn.dataset.filter);
+    });
+  });
+
+  window.addEventListener("hashchange", function() {
+    const key = location.hash.slice(1);
+    applyFilter(validFilters.indexOf(key) >= 0 ? key : "all");
+  });
+
+  const initial = location.hash.slice(1);
+  if (validFilters.indexOf(initial) > 0) {
+    applyFilter(initial);
+    window.addEventListener("load", function() {
+      const works = document.getElementById("works");
+      lenis.scrollTo(works.getBoundingClientRect().top + window.scrollY - 80, { immediate: true });
+    });
+  }
+}
+
 // スクロールで主要な要素をふわっと表示する
 const revealTargets = document.querySelectorAll(
-  ".section-title, .category-card, .card, .about-content, .contact-content"
+  ".section-title, .card, .about-content, .contact-content"
 );
 
 if (revealTargets.length > 0 && "IntersectionObserver" in window) {

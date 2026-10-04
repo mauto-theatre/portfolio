@@ -58,34 +58,188 @@
       <p>いしがき とうま<br><br>Photo Video Products</p>
     </section>
 
-    <!-- 作品一覧 -->
+    <!-- 作品一覧(フィルタで絞り込み) -->
      <section id="works" class="works-section-wide">
        <h2 class="section-title">Works</h2>
 
-       <div class="works-grid">
+       <div class="filter-bar" role="tablist" aria-label="作品の絞り込み">
+        <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="photo">Photo</button>
+        <button type="button" class="filter-btn" data-filter="video">Video</button>
+        <button type="button" class="filter-btn" data-filter="products">Products</button>
+       </div>
 
-        <a href="photo.html" class="category-card">
-          <div class="category-img-wrap">
-           <img src="images/cover-photo.jpg" alt="写真作品">
+       <div class="works-all">
+
+        <a href="photo-work1.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo1.jpg" alt="Portrait1" loading="lazy">
           </div>
-          <h3>Photo</h3>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Portrait きかぜ</h3>
         </a>
 
-        <a href="video.html" class="category-card">
-          <div class="category-img-wrap">
-           <img src="images/cover-video.jpg" alt="映像作品">
+        <a href="photo-work2.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo2.jpg" alt="Cats1" loading="lazy">
           </div>
-          <h3>Video</h3>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Cats</h3>
         </a>
 
-        <a href="products.html" class="category-card">
-          <div class="category-img-wrap">
-           <img src="images/product2-10.jpg" alt="演劇作品">
+        <a href="photo-work3.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo3.jpg" alt="Portrait2" loading="lazy">
           </div>
-          <h3>Products</h3>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Portrait モノクロ</h3>
         </a>
 
-      </div>
+        <a href="photo-work4.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo4.jpg" alt="Landscape1" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Landscape スクエア</h3>
+        </a>
+
+        <a href="photo-work5.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo5.jpg" alt="Portrait3" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Portrait 『略式：ハワイ』</h3>
+        </a>
+
+        <a href="photo-work6.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo6.jpg" alt="Close-up" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Close-up はな</h3>
+        </a>
+
+        <a href="photo-work7.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo7.jpg" alt="Portrait4" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Portrait 背</h3>
+        </a>
+
+        <a href="photo-work8.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo8.jpg" alt="Landscape2" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Landscape うみ</h3>
+        </a>
+
+        <a href="photo-work9.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo9.jpg" alt="Portrait5" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Portrait よこ</h3>
+        </a>
+
+        <a href="photo-work10.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo10.jpg" alt="Portrait6" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Portrait たて</h3>
+        </a>
+
+        <a href="photo-work11.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/theatre1-photo2.jpg" alt="Production Photos1" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Production Photos 『ヤギの歩みに戻らない。』</h3>
+        </a>
+
+        <a href="photo-work12.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo12.jpg" alt="Behind The Scenes1" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Behind The Scenes 『アドバルーンよつれてって』</h3>
+        </a>
+
+        <a href="photo-work13.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo13-1.jpg" alt="Portrait7" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Portrait 『２０歳、僕の話』</h3>
+        </a>
+
+        <a href="photo-work14.html" class="work-tile" data-category="photo">
+          <div class="work-tile-img">
+            <img src="images/photo14-1.jpg" alt="Landscape3" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Photo</p>
+          <h3>Landscape France</h3>
+        </a>
+
+        <a href="video-work1.html" class="work-tile" data-category="video">
+          <div class="work-tile-img">
+            <img src="images/video1.jpg" alt="video1 DEMO REEL" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Video</p>
+          <h3>デモリール - DEMO REEL</h3>
+        </a>
+
+        <a href="video-work2.html" class="work-tile" data-category="video">
+          <div class="work-tile-img">
+            <img src="images/video2.jpg" alt="video2 概日リズム" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Video</p>
+          <h3>短編 『概日(がいじつ)リズム』</h3>
+        </a>
+
+        <a href="video-work3.html" class="work-tile" data-category="video">
+          <div class="work-tile-img">
+            <img src="images/video3.jpg" alt="video3 略式：ハワイ" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Video</p>
+          <h3>終演映像 『略式：ハワイ』</h3>
+        </a>
+
+        <a href="video-work4.html" class="work-tile" data-category="video">
+          <div class="work-tile-img">
+            <img src="images/video4.jpg" alt="video4 2000兆年" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Video</p>
+          <h3>情報公開 『2000兆年』</h3>
+        </a>
+
+        <a href="video-work5.html" class="work-tile" data-category="video">
+          <div class="work-tile-img">
+            <img src="images/video5.jpg" alt="video5 アドバルーンよつれてって" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Video</p>
+          <h3>トレーラー 『アドバルーンよつれてって』</h3>
+        </a>
+
+        <a href="product-work1.html" class="work-tile" data-category="products">
+          <div class="work-tile-img">
+            <img src="images/product1.jpg" alt="作品の説明" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Products</p>
+          <h3>広報ビジュアル<br>『ヤギの歩みに戻らない。』</h3>
+        </a>
+
+        <a href="product-work2.html" class="work-tile" data-category="products">
+          <div class="work-tile-img">
+            <img src="images/product2.jpg" alt="作品の説明" loading="lazy">
+          </div>
+          <p class="work-tile-meta">Products</p>
+          <h3>制作 <br>「場所 と つながる」</h3>
+        </a>
+
+       </div>
     </section>
 
     <!-- 自己紹介 -->

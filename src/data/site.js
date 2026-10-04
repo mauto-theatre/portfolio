@@ -28,9 +28,4 @@ export const site = {
     'product2-14.jpg',
     'photo12-1.jpg',
   ],
-  categories: [
-    { title: 'Photo', href: 'photo.html', cover: 'cover-photo.jpg', alt: '写真作品' },
-    { title: 'Video', href: 'video.html', cover: 'cover-video.jpg', alt: '映像作品' },
-    { title: 'Products', href: 'products.html', cover: 'product2-10.jpg', alt: '演劇作品' },
-  ],
 };

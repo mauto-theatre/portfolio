@@ -6,8 +6,7 @@ import { photos } from './data/photos.js';
 import { videos } from './data/videos.js';
 import { products } from './data/products.js';
 import { withSiblings } from './templates/shared.js';
-import { renderIndexPage } from './templates/index.js';
-import { renderPhotoListPage, renderVideoListPage, renderProductsListPage } from './templates/categoryList.js';
+import { renderIndexPage, renderRedirectPage } from './templates/index.js';
 import { renderPhotoDetailPage } from './templates/photoDetail.js';
 import { renderVideoDetailPage } from './templates/videoDetail.js';
 import { renderProductDetailPage } from './templates/productDetail.js';
@@ -20,9 +19,11 @@ function write(filename, html) {
 }
 
 write('index.html', renderIndexPage());
-write('photo.html', renderPhotoListPage(photos));
-write('video.html', renderVideoListPage(videos));
-write('products.html', renderProductsListPage(products));
+
+// 旧カテゴリページは一覧(トップ)へ転送するだけの薄いページとして残す
+write('photo.html', renderRedirectPage('photo'));
+write('video.html', renderRedirectPage('video'));
+write('products.html', renderRedirectPage('products'));
 
 for (const { item, prev, next } of withSiblings(photos)) {
   write(`${item.slug}.html`, renderPhotoDetailPage({ item, prev, next }));

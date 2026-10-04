@@ -7,12 +7,12 @@ export function renderPhotoDetailPage({ item, prev, next }) {
 
       <!-- タイトル -->
       <header class="work-header">
-        <p class="work-breadcrumb"><a href="photo.html">←Photo</a></p>
+        <p class="work-breadcrumb"><a href="index.html#photo">←Photo</a></p>
         <h1 class="work-title">${item.cardTitle}</h1>
       </header>
 ${renderPhotoImages(item.images)}
 ${renderWorkNav({
-  backHref: 'photo.html',
+  backHref: 'index.html#photo',
   backLabel: 'Photo',
   prevHref: `${prev.slug}.html`,
   nextHref: `${next.slug}.html`,
