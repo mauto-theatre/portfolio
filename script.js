@@ -81,26 +81,6 @@ if (filterBtns.length > 0) {
   }
 }
 
-// スクロールで主要な要素をふわっと表示する
-const revealTargets = document.querySelectorAll(
-  ".section-title, .card, .about-content, .contact-content"
-);
-
-if (revealTargets.length > 0 && "IntersectionObserver" in window) {
-  revealTargets.forEach(function(el) { el.classList.add("reveal"); });
-
-  const revealObserver = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  revealTargets.forEach(function(el) { revealObserver.observe(el); });
-}
-
 // スマホかどうかを判定する
 const isMobile = window.matchMedia("(max-width: 600px)").matches;
 
@@ -299,10 +279,9 @@ lenis.on("scroll", function(e) {
   }
 });
 
-// ヒーロー背景: 読み込みごとにランダムで1枚だけ表示(スクロール切り替えはしない)
-const heroSlider = document.querySelector(".hero-bg-slider");
-if (heroSlider && heroSlider.dataset.images) {
-  const heroImages = heroSlider.dataset.images.split(",");
-  const pick = heroImages[Math.floor(Math.random() * heroImages.length)];
-  heroSlider.querySelector(".hero-bg-img").style.backgroundImage = "url('" + pick + "')";
+// ヒーロー画像: 掲載中の作品の画像から、読み込みごとにランダムで1枚表示
+const heroImage = document.querySelector(".hero-image");
+if (heroImage && heroImage.dataset.images) {
+  const heroImages = heroImage.dataset.images.split(",");
+  heroImage.querySelector("img").src = heroImages[Math.floor(Math.random() * heroImages.length)];
 }

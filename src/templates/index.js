@@ -22,8 +22,15 @@ function tile({ category, label, href, cover, alt, titleHtml }) {
 }
 
 export function renderIndexPage() {
-  const heroImagesAttr = site.heroImages.map((img) => `images/${img}`).join(',');
-  const heroBg = `       <div class="hero-bg-img active" style="background-image: url('images/${site.heroImages[0]}');"></div>`;
+  // ヒーローに出す画像: 一覧に掲載中の作品の画像すべて
+  const heroPool = [
+    ...photos.flatMap((p) => p.images.map((i) => i.src)),
+    ...videos.flatMap((v) => [v.cardCover, ...v.images.map((i) => i.src)]),
+    ...products
+      .filter((p) => p.listed)
+      .flatMap((p) => [p.heroImage?.src, ...p.sliders.flatMap((s) => s.images.map((i) => i.src))].filter(Boolean)),
+  ].map((src) => `images/${src}`);
+  const heroImagesAttr = [...new Set(heroPool)].join(',');
 
   const filterButtons = filters
     .map((f) => `        <button type="button" class="filter-btn${f.key === 'all' ? ' is-active' : ''}" data-filter="${f.key}">${f.label}</button>`)
@@ -40,14 +47,10 @@ export function renderIndexPage() {
   const bodyHtml = `
     <!-- ヒーロー：最初に見える大きなエリア -->
      <section id="hero">
-      <div class="hero-bg-slider" data-images="${heroImagesAttr}">
-${heroBg}
+      <h1>${site.nameKana}</h1>
+      <div class="hero-image" data-images="${heroImagesAttr}">
+        <img src="${heroImagesAttr.split(',')[0]}" alt="">
       </div>
-
-      <h1>
-        ${site.name}
-      </h1>
-      <p>${site.nameKana}<br><br>${site.tagline}</p>
     </section>
 
     <!-- 作品一覧(フィルタで絞り込み) -->
