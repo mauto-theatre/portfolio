@@ -5,7 +5,7 @@ export function renderVideoDetailPage({ item, prev, next }) {
     <article class="work-detail">
 
       <header class="work-header">
-        <p class="work-breadcrumb"><a href="index.html#video">←Video</a></p>
+        <p class="work-breadcrumb"><a href="index.html#works">←Works</a></p>
         <h1 class="work-title">${item.titleHtml || item.cardTitle}</h1>
         <p class="work-year">${item.year}</p>
       </header>
@@ -23,8 +23,8 @@ export function renderVideoDetailPage({ item, prev, next }) {
       <!-- スチル写真 -->
 ${renderPhotoImages(item.images)}
 ${renderWorkNav({
-  backHref: 'index.html#video',
-  backLabel: 'Video',
+  backHref: 'index.html#works',
+  backLabel: 'Works',
   prevHref: `${prev.slug}.html`,
   nextHref: `${next.slug}.html`,
 })}

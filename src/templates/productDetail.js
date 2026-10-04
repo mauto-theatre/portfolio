@@ -23,7 +23,7 @@ export function renderProductDetailPage({ item, prev, next }) {
     <article class="work-detail">
 
       <header class="work-header">
-        <p class="work-breadcrumb"><a href="index.html#products">←Products</a></p>
+        <p class="work-breadcrumb"><a href="index.html#works">←Works</a></p>
         <h1 class="work-title">${item.breadcrumbTitle}</h1>
         <p class="work-year">${item.year}</p>
         <p class="work-desc">${item.descHtml}</p>
@@ -36,8 +36,8 @@ ${slidersHtml}
 ${infoRowsHtml}
       </div>
 ${renderWorkNav({
-  backHref: 'index.html#products',
-  backLabel: 'Products',
+  backHref: 'index.html#works',
+  backLabel: 'Works',
   prevHref: `${prev.slug}.html`,
   nextHref: `${next.slug}.html`,
 })}
