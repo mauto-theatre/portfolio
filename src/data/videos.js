@@ -19,6 +19,7 @@ export const videos = [
   {
     slug: 'video-work2',
     docTitle: 'video2 circadian rhythm',
+    inHero: true,
     cardTitle: '短編 『概日(がいじつ)リズム』',
     titleHtml: '短編 『概日(がいじつ)リズム』<br>- Circadian Rhythm',
     cardCover: 'video2.jpg',

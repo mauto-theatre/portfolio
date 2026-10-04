@@ -22,13 +22,10 @@ function tile({ category, label, href, cover, alt, titleHtml }) {
 }
 
 export function renderIndexPage() {
-  // ヒーローに出す画像: 一覧に掲載中の作品の画像すべて
+  // ヒーローに出す画像: 写真作品すべて + inHero を付けた映像作品
   const heroPool = [
     ...photos.flatMap((p) => p.images.map((i) => i.src)),
-    ...videos.flatMap((v) => [v.cardCover, ...v.images.map((i) => i.src)]),
-    ...products
-      .filter((p) => p.listed)
-      .flatMap((p) => [p.heroImage?.src, ...p.sliders.flatMap((s) => s.images.map((i) => i.src))].filter(Boolean)),
+    ...videos.filter((v) => v.inHero).flatMap((v) => [v.cardCover, ...v.images.map((i) => i.src)]),
   ].map((src) => `images/${src}`);
   const heroImagesAttr = [...new Set(heroPool)].join(',');
 
