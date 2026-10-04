@@ -1,4 +1,15 @@
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { site } from '../data/site.js';
+
+// style.css / script.js の内容から短いハッシュを作り、更新時にブラウザのキャッシュを確実に切り替える
+function assetVersion(file) {
+  const path = fileURLToPath(new URL(`../../${file}`, import.meta.url));
+  return createHash('md5').update(readFileSync(path)).digest('hex').slice(0, 8);
+}
+const cssV = assetVersion('style.css');
+const jsV = assetVersion('script.js');
 
 // タイポグラフィ(Typekit)読み込みスクリプト。全ページ共通。
 const typekitScript = `
@@ -43,7 +54,7 @@ export function pageShell({ title, home = false, bodyHtml }) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>${typekitScript}
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=${cssV}">
   </head>
   <body>
 ${renderNav({ home })}
@@ -51,7 +62,7 @@ ${bodyHtml}
 ${renderFooter()}
 
     <script src="lenis.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=${jsV}"></script>
   </body>
 </html>
 `;

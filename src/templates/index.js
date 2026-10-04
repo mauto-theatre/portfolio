@@ -45,7 +45,8 @@ export function renderIndexPage() {
   const bodyHtml = `
     <!-- ヒーロー：最初に見える大きなエリア -->
      <section id="hero">
-      <h1><span class="hero-en">${site.heroSub}</span>${site.nameKana}</h1>
+      <h1>${site.nameKana}</h1>
+      <p class="hero-sub">${site.heroSub}</p>
       <div class="hero-image" data-images="${heroImagesAttr}">
         <img src="${heroImagesAttr.split(',')[0]}" alt="">
       </div>

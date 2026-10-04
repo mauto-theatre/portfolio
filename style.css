@@ -117,16 +117,14 @@ nav ul a:hover {
   font-weight: 700;
   letter-spacing: 0.3em;
   color: #222;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
-.hero-en {
-  display: block;
-  margin-bottom: 0.6rem;
-  font-size: max(0.75rem, 0.35em);
-  font-weight: 400;
+.hero-sub {
+  margin-bottom: 5rem;
+  font-size: 0.85rem;
   letter-spacing: 0.15em;
-  white-space: nowrap;
+  color: #222;
 }
 
 .hero-image img {
@@ -772,7 +770,7 @@ footer {
     padding: 6rem 1.5rem 2rem;
   }
 
-  #hero h1 {
+  .hero-sub {
     margin-bottom: 3rem;
   }
 
