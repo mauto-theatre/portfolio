@@ -299,13 +299,10 @@ lenis.on("scroll", function(e) {
   }
 });
 
-// ヒーロー背景のクロスフェード
-const heroBgImgs = document.querySelectorAll(".hero-bg-img");
-if (heroBgImgs.length > 0) {
-  let heroBgCurrent = 0;
-  setInterval(function() {
-    heroBgImgs[heroBgCurrent].classList.remove("active");
-    heroBgCurrent = (heroBgCurrent + 1) % heroBgImgs.length;
-    heroBgImgs[heroBgCurrent].classList.add("active");
-  }, 5000);
+// ヒーロー背景: 読み込みごとにランダムで1枚だけ表示(スクロール切り替えはしない)
+const heroSlider = document.querySelector(".hero-bg-slider");
+if (heroSlider && heroSlider.dataset.images) {
+  const heroImages = heroSlider.dataset.images.split(",");
+  const pick = heroImages[Math.floor(Math.random() * heroImages.length)];
+  heroSlider.querySelector(".hero-bg-img").style.backgroundImage = "url('" + pick + "')";
 }

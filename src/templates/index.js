@@ -22,9 +22,8 @@ function tile({ category, label, href, cover, alt, titleHtml }) {
 }
 
 export function renderIndexPage() {
-  const heroBg = site.heroImages
-    .map((img, i) => `       <div class="hero-bg-img${i === 0 ? ' active' : ''}" style="background-image: url('images/${img}');"></div>`)
-    .join('\n');
+  const heroImagesAttr = site.heroImages.map((img) => `images/${img}`).join(',');
+  const heroBg = `       <div class="hero-bg-img active" style="background-image: url('images/${site.heroImages[0]}');"></div>`;
 
   const filterButtons = filters
     .map((f) => `        <button type="button" class="filter-btn${f.key === 'all' ? ' is-active' : ''}" data-filter="${f.key}">${f.label}</button>`)
@@ -41,7 +40,7 @@ export function renderIndexPage() {
   const bodyHtml = `
     <!-- ヒーロー：最初に見える大きなエリア -->
      <section id="hero">
-      <div class="hero-bg-slider">
+      <div class="hero-bg-slider" data-images="${heroImagesAttr}">
 ${heroBg}
       </div>
 
