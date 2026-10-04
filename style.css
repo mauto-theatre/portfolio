@@ -113,9 +113,9 @@ nav ul a:hover {
 
 #hero h1 {
   font-family: zen-kaku-gothic-antique, sans-serif;
-  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 700;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.3em;
   color: #222;
   margin-bottom: 2.5rem;
 }

@@ -83,6 +83,7 @@ export const products = [
       },
       {
         heading: '完成後写真',
+        inHero: true,
         images: [
           { src: 'product2-10.jpg', alt: '完成1' },
           { src: 'product2-11.jpg', alt: '完成2' },

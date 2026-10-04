@@ -35,6 +35,7 @@ export const videos = [
   {
     slug: 'video-work3',
     docTitle: 'video3 hawaii',
+    inHero: true,
     cardTitle: '終演映像 『略式：ハワイ』',
     cardCover: 'video3.jpg',
     cardAlt: 'video3 略式：ハワイ',
@@ -49,6 +50,7 @@ export const videos = [
   {
     slug: 'video-work4',
     docTitle: 'video4 2000000000000000',
+    inHero: true,
     cardTitle: '情報公開 『2000兆年』',
     cardCover: 'video4.jpg',
     cardAlt: 'video4 2000兆年',
