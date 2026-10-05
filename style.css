@@ -23,7 +23,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #222;
-  background-color: #ffffff;
+  background-color: #cccccc;
   overflow-x: hidden;
 }
 
@@ -37,8 +37,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
-  background-color: rgba(255, 255, 255, 0.92);
-  border-bottom: 1px solid #eee;
+  background-color: rgba(204, 204, 204, 0.92);
+  border-bottom: 1px solid #b3b3b3;
   z-index: 100;
   transition: transform 0.3s ease;
 }
@@ -148,12 +148,12 @@ section {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: #aaa;
+  color: #666;
   margin-bottom: 3rem;
 }
 
 .section-title a {
-  color: #aaa;
+  color: #666;
   text-decoration: none;
 }
 
@@ -231,7 +231,7 @@ section {
   width: 100%;
   aspect-ratio: 4/3;
   overflow: hidden;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .card .card-img-wrap img {
@@ -288,9 +288,9 @@ section {
   margin-right: calc(50% - 50vw);
   padding-left: calc(50vw - 550px);
   padding-right: calc(50vw - 550px);
-  min-height: 60vh;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  aspect-ratio: 3508 / 2480;
+  padding-top: 6rem;
+  padding-bottom: 0;
 }
 
 #about::before {
@@ -300,31 +300,26 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('images/photo-about5.jpg');
-  background-size: 100%;
+  background-image: url('images/photo-about6.jpg');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(0px);
-
 }
 
 #about .section-title,
 #about .about-content {
   position: relative;
   z-index: 1;
-  color: #fff;
 }
 
 #about .about-content p {
-  color: #fff;
+  color: #222;
   font-size: 1rem;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 #about .section-title {
-  color: #eee;
+  color: #222;
   font-size: 1.5rem;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -337,7 +332,7 @@ section {
 
 .contact-content p {
   font-size: 0.85rem;
-  color: #888;
+  color: #555;
   letter-spacing: 0.05em;
 }
 
@@ -348,7 +343,7 @@ section {
   font-style: normal;
   color: #222;
   text-decoration: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #999;
   padding-bottom: 0.25rem;
   transition: border-color 0.2s;
   width: fit-content;
@@ -363,9 +358,9 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.75rem;
-  color: #bbb;
+  color: #666;
   letter-spacing: 0.08em;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #b3b3b3;
 }
 
 /* カテゴリページのヘッダー */
@@ -392,12 +387,12 @@ footer {
 .work-breadcrumb {
   font-size: 1rem;
   letter-spacing: 0.1em;
-  color: #aaa;
+  color: #666;
   margin-bottom: 0.75rem;
 }
 
 .work-breadcrumb a {
-  color: #aaa;
+  color: #666;
   text-decoration: none;
 }
 
@@ -424,7 +419,7 @@ footer {
 
 .work-year {
   font-size: 0.8rem;
-  color: #aaa;
+  color: #666;
   letter-spacing: 0.08em;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
@@ -469,7 +464,7 @@ footer {
 /* 演劇詳細の情報 */
 .theatre-info {
   margin-top: 3rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #b3b3b3;
   padding-top: 2rem;
 }
 
@@ -477,12 +472,12 @@ footer {
   display: flex;
   gap: 2rem;
   padding: 0.75rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #b3b3b3;
 }
 
 .theatre-info-label {
   font-size: 0.75rem;
-  color: #aaa;
+  color: #666;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   width: 140px;
@@ -504,8 +499,8 @@ footer {
   left: 0;
   width: 100%;
   padding: 2rem 3rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eee;
+  background-color: #cccccc;
+  border-bottom: 1px solid #b3b3b3;
   z-index: 99;
   transition: transform 0.3s ease;
 }
@@ -516,7 +511,7 @@ footer {
 
 .work-nav a {
   font-size: 1rem;
-  color: #aaa;
+  color: #666;
   text-decoration: none;
   letter-spacing: 0.05em;
   transition: color 0.2s;
@@ -560,7 +555,7 @@ footer {
   font-size: 1.2rem;
   padding: 0.5rem;
   cursor: pointer;
-  color: #aaa;
+  color: #666;
   transition: color 0.2s;
   flex-shrink: 0;
 }
@@ -573,7 +568,7 @@ footer {
 .slider-count {
   text-align: center;
   font-size: 0.75rem;
-  color: #aaa;
+  color: #666;
   margin-top: 0.75rem;
   letter-spacing: 0.1em;
 }
@@ -649,7 +644,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.75rem;
-  color: #aaa;
+  color: #666;
   letter-spacing: 0.1em;
   z-index: 202;
 }
@@ -674,7 +669,7 @@ footer {
 
 .work-back a {
   font-size: 1rem;
-  color: #aaa;
+  color: #666;
   text-decoration: none;
   letter-spacing: 0.05em;
   transition: color 0.2s;
@@ -688,8 +683,8 @@ footer {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #ddd;
+  background: rgba(204, 204, 204, 0.9);
+  border: 1px solid #999;
   padding: 0.75rem 1.25rem;
   font-family: 'zen-kaku-gothic-new', sans-serif;
   font-size: 0.8rem;
@@ -823,8 +818,19 @@ footer {
   .lightbox-tap-right { right: 0; }
 
   #about {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+    padding: 4rem 1.5rem 0;
+  }
+
+  #about::before {
+    position: static;
+    order: 2;
+    width: calc(100% + 3rem);
+    height: auto;
+    margin: 2rem -1.5rem 0;
+    aspect-ratio: 3508 / 2480;
   }
 
   #about .about-content p {
@@ -854,7 +860,7 @@ footer {
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #aaa;
+  color: #666;
   cursor: pointer;
   transition: color 0.2s, border-color 0.2s;
 }
@@ -889,7 +895,7 @@ footer {
   width: 100%;
   aspect-ratio: 4/3;
   overflow: hidden;
-  background-color: #f4f4f4;
+  background-color: #c2c2c2;
 }
 
 .work-tile-img img {
@@ -908,7 +914,7 @@ footer {
   margin-top: 0.75rem;
   font-size: 0.7rem;
   letter-spacing: 0.15em;
-  color: #aaa;
+  color: #666;
   text-transform: uppercase;
 }
 
