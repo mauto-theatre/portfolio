@@ -23,7 +23,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #222;
-  background-color: #cccccc;
+  background-color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -37,8 +37,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
-  background-color: rgba(204, 204, 204, 0.92);
-  border-bottom: 1px solid #b3b3b3;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid #eee;
   z-index: 100;
   transition: transform 0.3s ease;
 }
@@ -148,12 +148,12 @@ section {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: #666;
+  color: #aaa;
   margin-bottom: 3rem;
 }
 
 .section-title a {
-  color: #666;
+  color: #aaa;
   text-decoration: none;
 }
 
@@ -231,7 +231,7 @@ section {
   width: 100%;
   aspect-ratio: 4/3;
   overflow: hidden;
-  background-color: transparent;
+  background-color: #fff;
 }
 
 .card .card-img-wrap img {
@@ -300,7 +300,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('images/photo-about6.jpg');
+  background-image: url('images/photo-about7.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -332,7 +332,7 @@ section {
 
 .contact-content p {
   font-size: 0.85rem;
-  color: #555;
+  color: #888;
   letter-spacing: 0.05em;
 }
 
@@ -343,7 +343,7 @@ section {
   font-style: normal;
   color: #222;
   text-decoration: none;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #ddd;
   padding-bottom: 0.25rem;
   transition: border-color 0.2s;
   width: fit-content;
@@ -358,9 +358,9 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.75rem;
-  color: #666;
+  color: #bbb;
   letter-spacing: 0.08em;
-  border-top: 1px solid #b3b3b3;
+  border-top: 1px solid #eee;
 }
 
 /* カテゴリページのヘッダー */
@@ -387,12 +387,12 @@ footer {
 .work-breadcrumb {
   font-size: 1rem;
   letter-spacing: 0.1em;
-  color: #666;
+  color: #aaa;
   margin-bottom: 0.75rem;
 }
 
 .work-breadcrumb a {
-  color: #666;
+  color: #aaa;
   text-decoration: none;
 }
 
@@ -419,7 +419,7 @@ footer {
 
 .work-year {
   font-size: 0.8rem;
-  color: #666;
+  color: #aaa;
   letter-spacing: 0.08em;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
@@ -464,7 +464,7 @@ footer {
 /* 演劇詳細の情報 */
 .theatre-info {
   margin-top: 3rem;
-  border-top: 1px solid #b3b3b3;
+  border-top: 1px solid #eee;
   padding-top: 2rem;
 }
 
@@ -472,12 +472,12 @@ footer {
   display: flex;
   gap: 2rem;
   padding: 0.75rem 0;
-  border-bottom: 1px solid #b3b3b3;
+  border-bottom: 1px solid #eee;
 }
 
 .theatre-info-label {
   font-size: 0.75rem;
-  color: #666;
+  color: #aaa;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   width: 140px;
@@ -499,8 +499,8 @@ footer {
   left: 0;
   width: 100%;
   padding: 2rem 3rem;
-  background-color: #cccccc;
-  border-bottom: 1px solid #b3b3b3;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
   z-index: 99;
   transition: transform 0.3s ease;
 }
@@ -511,7 +511,7 @@ footer {
 
 .work-nav a {
   font-size: 1rem;
-  color: #666;
+  color: #aaa;
   text-decoration: none;
   letter-spacing: 0.05em;
   transition: color 0.2s;
@@ -555,7 +555,7 @@ footer {
   font-size: 1.2rem;
   padding: 0.5rem;
   cursor: pointer;
-  color: #666;
+  color: #aaa;
   transition: color 0.2s;
   flex-shrink: 0;
 }
@@ -568,7 +568,7 @@ footer {
 .slider-count {
   text-align: center;
   font-size: 0.75rem;
-  color: #666;
+  color: #aaa;
   margin-top: 0.75rem;
   letter-spacing: 0.1em;
 }
@@ -644,7 +644,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.75rem;
-  color: #666;
+  color: #aaa;
   letter-spacing: 0.1em;
   z-index: 202;
 }
@@ -669,7 +669,7 @@ footer {
 
 .work-back a {
   font-size: 1rem;
-  color: #666;
+  color: #aaa;
   text-decoration: none;
   letter-spacing: 0.05em;
   transition: color 0.2s;
@@ -683,8 +683,8 @@ footer {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: rgba(204, 204, 204, 0.9);
-  border: 1px solid #999;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
   padding: 0.75rem 1.25rem;
   font-family: 'zen-kaku-gothic-new', sans-serif;
   font-size: 0.8rem;
@@ -860,7 +860,7 @@ footer {
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #666;
+  color: #aaa;
   cursor: pointer;
   transition: color 0.2s, border-color 0.2s;
 }
@@ -895,7 +895,7 @@ footer {
   width: 100%;
   aspect-ratio: 4/3;
   overflow: hidden;
-  background-color: #c2c2c2;
+  background-color: #f4f4f4;
 }
 
 .work-tile-img img {
@@ -914,7 +914,7 @@ footer {
   margin-top: 0.75rem;
   font-size: 0.7rem;
   letter-spacing: 0.15em;
-  color: #666;
+  color: #aaa;
   text-transform: uppercase;
 }
 
